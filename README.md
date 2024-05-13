@@ -3,8 +3,8 @@
 **Course Code: PSIT4P3c**
 **List of Practical Exercises:**
 
-1. **Configure and use vCenter Server Appliance:**
-   - Assign roles and permissions to Active Directory users for vCenter Server Appliance administration.
+1. **A)Configure and use vCenter Server Appliance:**
+   - B)Assign roles and permissions to Active Directory users for vCenter Server Appliance administration.
 
 2. **Network Configuration:**
    - Create a standard switch and a port group.
