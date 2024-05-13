@@ -1,10 +1,13 @@
-Sure, here's your list organized into a table format:
+| Course Code | PSIT4P3c |
+|-------------|----------|
+| Course Name | Server Virtualization on VMware Platform Practical |
+| Semester    | IV       |
 
 | Practical | Description |
 |-----------|-------------|
 | 1a        | Configure and use vCenter Server Appliance. |
 | 1b        | Assign roles and permissions to Active Directory users to perform functions in vCenter Server Appliance. |
-| 2a        | Create a standard switch and a port group. |
+| 2a        |Create a standard switch and a port group. |
 | 2b        | Configure access to an iSCSI datastore. |
 | 3a        | Create and manage VMFS datastores. |
 | 3b        | Configure access to an NFS datastore. |
@@ -19,5 +22,3 @@ Sure, here's your list organized into a table format:
 | 9         | Use vSphere HA functionality. |
 | 10a       | Implement a vSphere DRS cluster. |
 | 10b       | Install, configure, and use vSphere Update Manager. |
-
-Hope this helps! Let me know if you need further assistance.
