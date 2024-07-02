@@ -1,0 +1,68 @@
+Install hyperledger fabric and composer. Deploy and execute the application. 
+
+$ sudo dpkg-reconfigure locales   // choose en_US.UTF-8 if in doubt 
+ 
+$ sudo apt-get update 
+
+$ sudo apt-get upgrade 
+ 
+Install pre-requists  
+$ sudo apt-get install curl git docker.io docker-compose golang nodejs npm 
+Type Y for yes 
+ 
+Install Docker 
+$ sudo usermod -a -G docker $USER 
+$ sudo systemctl start docker 
+$ sudo systemctl enable docker 
+$ sudo chmod 666 /var/run/docker.sock 
+ 
+ 
+Install Hyperledger Fabric 
+1. Check the latest version of fabric repository 
+2. Install Fabric 
+$ curl -sSL http://bit.ly/2ysbOFE | bash -s 1.4.0 
+3. Check if fabric is installed, you should see big "END" once done 
+$ cd fabric-samples/first-network 
+$ ./byfn.sh generate 
+ 
+$ ./byfn.sh up 
+ 
+ 
+4. Check if fabric docker is running smoothly 
+$ docker ps -a
+
+5. Stop the network 
+$ ./byfn.sh down 
+ 
+ 
+Install Composer 
+1. Create new user, when asked about the full name, use something different than the 
+full name used of the main user, to avoid confusion next time you are logging on. 
+$ sudo adduser playground 
+
+2. Set permission for the new user 
+$ sudo usermod -aG sudo playground 
+3. Login as the new user 
+$ su – playground 
+ 
+ 
+4. Install the prerequisites by getting and running the script from github. It will ask for 
+the password of “playground” account to proceed. 
+$ curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh 
+$ chmod u+x prereqs-ubuntu.sh 
+ 
+$ ./prereqs-ubuntu.sh 
+5. Logout and login with the new user to get things activated properly 
+$ exit 
+$ su - playground 
+
+6. Install components needed for running Hyperledger Fabric 
+$ curl -sSL http://bit.ly/2ysbOFE | bash -s 1.4.0 
+ 
+7. Install components needed for running Hyperledger Composer 
+$ npm install -g composer-cli composer-rest-server generator-hyperledger-composer 
+yo composer-playground 
+8. Start Composer 
+$ composer-playground 
+9. Open your browser and check it: 
+http://localhost:8080 
